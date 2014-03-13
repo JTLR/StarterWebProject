@@ -1,4 +1,1 @@
-Moviematch
-================
-
-Movie suggestion web app
+Starter web project
