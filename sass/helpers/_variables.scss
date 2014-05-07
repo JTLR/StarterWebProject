@@ -1,8 +1,17 @@
 // Breakpoints
+$base: 0;			 // Above 0px
 $small: 30.063em;    // Above 320px
 $medium: 33.813em;   // Above 480px
 $large: 48em;        // Above 767px
 $xlarge: 64em;       // Above 1024px
+
+// Grid variables
+$grid-columns: 24;            
+$grid-width: 1170;         
+$column-width: "";      
+$column-margin: 30;
+$breakpoints: $base, $small, $medium, $large, $xlarge;
+$breakpoint-alias: "base", "small", "medium", "large", "xlarge";
 
 // Colors
 $color-brand: #28DAC7;
