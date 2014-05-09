@@ -3,6 +3,7 @@
 
 // Helpers
 @import "helpers/variables";
+@import "helpers/functions";
 @import "helpers/mixins";
 
 // Fonts
@@ -10,16 +11,21 @@
 
 // Base
 @import "base/reset";
-@import "base/typography";
 
 // Layout
 @import "layout/grid";
 
-// Modules
-@import "modules/buttons";
+// Atoms
+@import "atoms/typography";
+@import "atoms/buttons";
+@import "atoms/forms";
+@import "atoms/images";
+@import "atoms/lists";
+@import "atoms/tables";
 
-// Vendors
+// Molecules
 
-// Themes
-
-// Pages
+// Organisms
+@import "organisms/site-header";
+@import "organisms/site-main";
+@import "organisms/site-footer";

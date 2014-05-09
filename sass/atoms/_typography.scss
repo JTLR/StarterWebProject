@@ -1,21 +1,27 @@
-h1 {
-	
-}
-h2 {
-	
-}
-h3 {
-	
-}
-h4 {
-	
-}
-h5 {
-	
-}
-h6 {
-	
-}
-p {
-	
+$font-counter: 1;
+@each $breakpoint in $breakpoints {
+	@include breakpoint(nth($breakpoints, $font-counter), $font-counter) {    
+		h1 {
+			font-size: rem(($font-size-h1 + (5 * ($font-counter - 1))));
+		}
+		h2 {
+			font-size: rem(($font-size-h2 + (5 * ($font-counter - 1))));
+		}
+		h3 {
+			font-size: rem(($font-size-h3 + (5 * ($font-counter - 1))));
+		}
+		h4 {
+			font-size: rem(($font-size-h4 + (5 * ($font-counter - 1))));
+		}
+		h5 {
+			font-size: rem(($font-size-h5 + (5 * ($font-counter - 1))));
+		}
+		h6 {
+			font-size: rem(($font-size-h6 + (5 * ($font-counter - 1))));
+		}
+		p {
+			font-size: rem(($font-size-p + ($font-counter - 1)));
+		}
+	}
+	$font-counter: $font-counter + 1;
 }
