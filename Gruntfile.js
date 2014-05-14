@@ -4,14 +4,13 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
                 compress: {
                     drop_console: true
                 }
             },
             build: {
-                src: 'pub/js/javascript.min.js',
-                dest: 'pub/js/javascript.min.js'
+                src: 'javascript/javascript.js',
+                dest: 'javascript/javascript.min.js'
             }
         },
         concat: {
@@ -19,24 +18,26 @@ module.exports = function(grunt) {
                 separator: ';'
             },
             dist: {
-                src: ['pub/js/plugins/jquery-1.9.1.min.js', 'pub/js/plugins/jquery.easydropdown.min.js', 'pub/js/javascript.js'],
-                dest: 'pub/js/javascript.min.js'
+                src: 'javascript/*.js',
+                dest: 'javascript/javascript.min.js'
             }
         },
-        compass: {
+        sass: {
             dev: {
+                files: {
+                    'css/stylesheet.css': 'sass/stylesheet.scss'
+                },
                 options: {
-                    sassDir: 'code/sass',
-                    cssDir: 'pub/css',
-                    environment: 'development'
+                    sourceComments: 'map'
                 }
             },
             prod: {
+                files: {
+                    'css/stylesheet.css': 'sass/stylesheet.scss'
+                },
                 options: {
-                    sassDir: 'code/sass',
-                    cssDir: 'pub/css',
-                    environment: 'production'
-                }                
+                    outputStyle: 'compressed'
+                }
             }
         },
         imagemin: {
@@ -46,20 +47,24 @@ module.exports = function(grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'pub/images/',       
+                    cwd: 'images/',       
                     src: ['*.{png,jpg,gif}'],
-                    dest: 'pub/images/optimised/'
+                    dest: 'images/optimised/'
                 }]
             }
         },
         watch: {
-            dev: {
-                files: ['pub/js/plugins/*.js', 'pub/js/javascript.js',  '**/*.scss', 'pub/images/*.{png,jpg,gif}'],
-                tasks: ['concat', 'uglify', 'compass:dev', 'imagemin']
+            images: {
+                files: ['images/*.{png,jpg,gif}'],
+                tasks: ['imagemin:dynamic']
             },
-            prod: {
-                files: ['pub/js/plugins/*.js', 'pub/js/javascript.js',  '**/*.scss', 'pub/images/*.{png,jpg,gif}'],
-                tasks: ['concat', 'uglify', 'compass:prod', 'imagemin']
+            javascript: {
+                files: ['javascript/plugins/*.js', 'javascript/javascript.js'],
+                tasks: ['uglify:build']
+            },
+            sass: {
+                files: ['sass/**/*.scss'],
+                tasks: ['sass:dev']
             }
         },
         jshint: {
@@ -73,7 +78,7 @@ module.exports = function(grunt) {
                 }
             },
             files: {
-                src: ['pub/js/javascript.js']
+                src: ['javascript/javascript.js']
             }
         },
         csslint: {
@@ -81,18 +86,18 @@ module.exports = function(grunt) {
                 ids: false
             },
             files: {
-                src: ['pub/css/stylesheet.css']
+                src: ['css/stylesheet.css']
             }
         },
         browserstack: {
             dev: {
                 credentials: {
-                    username: 'drew@emosaic.co.uk',
-                    password: '1nfiniteBrowserStack'
+                    username: '',
+                    password: ''
                 }
             },
             start: {
-                url: 'http://www.gsmtravel.joseph.dev.mosaic-digital.com/home/index.html',
+                url: '',
                 browsers: [{
                     os: 'win',
                     browser: 'ie',
@@ -102,14 +107,15 @@ module.exports = function(grunt) {
         },
         browserstack_list: {
             dev: {
-                username: 'drew@emosaic.co.uk',
-                password: '1nfiniteBrowserStack'
+                username: '',
+                password: ''
             }
         },
         clean : {
             src : [
                 "**/example-*.{js,css,php,tpl,twig}",
-                "**/demo-*.{js,css,php,tpl,twig}"
+                "**/demo-*.{js,css,php,tpl,twig}",
+                "**/*.map"
             ]
         }
     });
@@ -121,13 +127,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-browserstack');
 
     // Defined tasks
-    grunt.registerTask('produce', ['concat', 'uglify', 'compass:prod', 'imagemin', 'clean']);
     grunt.registerTask('validate', ['jshint', 'csslint']);
     grunt.registerTask('browsertest', ['browserstack']);
-
+    grunt.registerTask('produce', ['uglify', 'sass:prod', 'imagemin', 'clean']);
 };
