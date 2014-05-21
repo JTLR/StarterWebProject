@@ -1,0 +1,33 @@
+.table-container {
+	margin-bottom: $table-margin;
+	overflow-x: auto; 
+	table {
+		margin-bottom: 0;
+	}
+}
+table {
+	width: 100%;
+	margin-bottom: $table-margin;
+}
+thead {
+
+}
+tbody {
+
+}
+tfoot {
+
+}
+
+th {
+	text-align: left;
+	font-weight: bold;
+}
+td {
+
+}
+th,
+td {
+	padding: $table-cell-padding;
+	border: $table-cell-border-width $table-cell-border-style $table-cell-border-color;
+}

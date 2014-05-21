@@ -1943,6 +1943,12 @@ a {
   .xlarge-hide {
     display: none; } }
 
+::selection {
+  background-color: #aaa; }
+
+::-moz-selection {
+  background: #aaa; }
+
 h1, .h1 {
   font-size: 2.5rem;
   line-height: 2.8125rem;
@@ -2210,6 +2216,28 @@ dt, dd {
 dt {
   font-weight: bold; }
 
+
+.table-container {
+  margin-bottom: 1.25rem;
+  overflow-x: auto; }
+  .table-container table {
+    margin-bottom: 0; }
+
+table {
+  width: 100%;
+  margin-bottom: 1.25rem; }
+
+
+
+
+th {
+  text-align: left;
+  font-weight: bold; }
+
+
+th, td {
+  padding: 0.625rem;
+  border: 0.0625rem solid #aaa; }
 
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }

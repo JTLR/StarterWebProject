@@ -53,13 +53,13 @@ $sizing-large 	: rem(20);
 $sizing-xlarge  : rem(30);
 
 // Atoms
-// Fonts
+// Typography
 // Font families
 $font-sans-serif	: Arial, "Helvetica Neue", Helvetica, sans-serif;
 $font-serif 		: Georgia, Times, "Times New Roman", serif;
 $font-monospaced	: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 
-// Font sizes
+// Typography sizes
 $font-size-h1: 40;
 $font-size-h2: 35;
 $font-size-h3: 30;
@@ -67,6 +67,9 @@ $font-size-h4: 25;
 $font-size-h5: 20;
 $font-size-h6: 15;
 $font-size-p : 15;
+
+// Typography miscellaneous
+$text-selection-color: $grey;
 
 // Buttons
 // Button colors
@@ -126,6 +129,13 @@ $button-standard-padding	: $button-medium-padding;
 // Lists
 $list-margin 		: $sizing-large;
 $list-item-margin	: $sizing-medium;
+
+// Tables
+$table-margin				: $sizing-large;
+$table-cell-padding			: $sizing-medium;
+$table-cell-border-width	: rem(1);
+$table-cell-border-color	: $grey;
+$table-cell-border-style	: solid;
 
 // organisms
 // site

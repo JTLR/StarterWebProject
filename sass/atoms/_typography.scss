@@ -1,3 +1,10 @@
+::selection {
+	background-color: $text-selection-color;
+}
+::-moz-selection {
+	background: $text-selection-color;
+}
+
 $font-counter: 1;
 @each $breakpoint in $breakpoints {
 	@include breakpoint(nth($breakpoints, $font-counter), $font-counter) {    
