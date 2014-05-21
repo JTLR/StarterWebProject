@@ -1,3 +1,14 @@
 .site-header {
 	@include clear-fix;
+	padding: $site-header-padding;
+	background-color: $site-header-bg-color;
+	color: $site-header-color;
+	&.fixed {
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+}
+.site-header-name {
+	white-space: nowrap;
 }

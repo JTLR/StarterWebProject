@@ -1,3 +1,39 @@
 .site-main {
 	@include clear-fix;
+	padding: $site-main-padding;
+	.site-header.fixed + & {
+		margin-top: rem(75);
+	}
+}
+
+@include breakpoint($small) {
+	.site-main {
+		.site-header.fixed + & {
+			margin-top: rem(80);
+		}		
+	}
+}
+
+@include breakpoint($medium) {
+	.site-main {
+		.site-header.fixed + & {
+			margin-top: rem(85);
+		}		
+	}
+}
+
+@include breakpoint($large) {
+	.site-main {
+		.site-header.fixed + & {
+			margin-top: rem(90);
+		}		
+	}
+}
+
+@include breakpoint($xlarge) {
+	.site-main {
+		.site-header.fixed + & {
+			margin-top: rem(95);
+		}		
+	}
 }

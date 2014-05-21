@@ -47,24 +47,96 @@ $grey-dark		: #333;
 $white			: #fff;
 
 
-// Spacing
-$spacing      : rem(20);
-$spacing-large: rem(30);
-$spacing-small: rem(10);
+// sizing
+$sizing-small	: rem(5);
+$sizing-medium	: rem(10);
+$sizing-large 	: rem(20);
+$sizing-xlarge  : rem(30);
 
+// Atoms
 // Fonts
-$font-primary	: 'NexaThin', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-secondary	: 'Alexandria', Georgia, Times, "Times New Roman", serif;
-$font-black		: 'NexaBlack', "Arial Black", "Arial Bold", Gadget, sans-serif;
-$font-bold		: 'Nexa-Bold', "Arial Bold", Gadget, sans-serif;
-$font-light		: 'Nexa-Light', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-code		: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+// Font families
+$font-sans-serif	: Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-serif 		: Georgia, Times, "Times New Roman", serif;
+$font-monospaced	: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 
 // Font sizes
-$font-size-h1: 35;
-$font-size-h2: 30;
-$font-size-h3: 25;
-$font-size-h4: 30;
-$font-size-h5: 25;
-$font-size-h6: 20;
+$font-size-h1: 40;
+$font-size-h2: 35;
+$font-size-h3: 30;
+$font-size-h4: 25;
+$font-size-h5: 20;
+$font-size-h6: 15;
 $font-size-p : 15;
+
+// Buttons
+// Button colors
+$button-bg-color-blue			: $blue;
+$button-color-blue 				: $white;
+$button-hover-bg-color-blue		: $blue-light;
+$button-active-bg-color-blue	: $blue-dark;
+$button-bg-color-green			: $green;
+$button-color-green 			: $white;
+$button-hover-bg-color-green	: $green-light;
+$button-active-bg-color-green	: $green-dark;
+$button-bg-color-yellow			: $yellow;
+$button-color-yellow 			: $black;
+$button-hover-bg-color-yellow	: $yellow-light;
+$button-active-bg-color-yellow	: $yellow-dark;
+$button-bg-color-orange			: $orange;
+$button-color-orange 			: $white;
+$button-hover-bg-color-orange	: $orange-light;
+$button-active-bg-color-orange	: $orange-dark;
+$button-bg-color-red			: $red;
+$button-color-red 				: $white;
+$button-hover-bg-color-red		: $red-light;
+$button-active-bg-color-red		: $red-dark;
+$button-bg-color-pink			: $pink;
+$button-color-pink 				: $white;
+$button-hover-bg-color-pink		: $pink-light;
+$button-active-bg-color-pink	: $pink-dark;
+$button-bg-color-purple			: $purple;
+$button-color-purple 			: $white;
+$button-hover-bg-color-purple	: $purple-light;
+$button-active-bg-color-purple	: $purple-dark;
+$button-bg-color-black			: $black-light;
+$button-color-black 			: $white;
+$button-hover-bg-color-black	: $grey-dark;
+$button-active-bg-color-black	: $black;
+$button-bg-color-grey			: $grey;
+$button-color-grey 				: $white;
+$button-hover-bg-color-grey		: $grey-light;
+$button-active-bg-color-grey	: $grey-dark;
+
+$button-bg-color-standard			: $button-bg-color-grey;
+$button-color-standard 				: $button-color-grey;
+$button-hover-bg-color-standard		: $button-hover-bg-color-grey;
+$button-active-bg-color-standard	: $button-active-bg-color-grey;
+
+// Button embellishments
+$button-border-radius	: $sizing-small;
+
+// Button sizes
+$button-small-padding		: $sizing-small;
+$button-medium-padding		: $sizing-medium;
+$button-large-padding		: $sizing-large;
+$button-xlarge-padding		: $sizing-xlarge;
+
+$button-standard-padding	: $button-medium-padding;
+
+// organisms
+// site
+$site-font 		: $font-sans-serif;
+
+// site-header
+$site-header-bg-color	: $grey;
+$site-header-color 		: $black;
+$site-header-padding	: $sizing-large;
+
+// site-main
+$site-main-padding	: $sizing-large;
+
+// site-footer
+$site-footer-bg-color	: $black-light;
+$site-footer-color 		: $white;
+$site-footer-padding	: $sizing-large;

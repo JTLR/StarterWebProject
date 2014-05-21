@@ -1,3 +1,11 @@
 .site-footer {
 	@include clear-fix;
+	padding: $site-footer-padding;
+	background-color: $site-footer-bg-color;
+	color: $site-footer-color;
+	&.fixed {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+	}
 }

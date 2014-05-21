@@ -4,7 +4,7 @@
 	width: 100%;
 }
 
-@mixin breakpoint($min-width, $breakpoint)  {
+@mixin breakpoint($min-width, $breakpoint: 2)  {
 	@if $stylesheet != "ie" and $breakpoint > 1 {
 		@media screen and (min-width: $min-width) {
 			@content;
@@ -12,4 +12,10 @@
 	} @else {
 		@content;
 	}
+}
+
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+			border-radius: $radius;
 }

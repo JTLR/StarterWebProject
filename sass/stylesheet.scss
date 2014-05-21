@@ -5,6 +5,7 @@
 @import "helpers/variables";
 @import "helpers/functions";
 @import "helpers/mixins";
+@import "helpers/classes";
 
 // Fonts
 @import "fonts/font-awesome";
@@ -26,6 +27,7 @@
 // Molecules
 
 // Organisms
+@import "organisms/site";
 @import "organisms/site-header";
 @import "organisms/site-main";
 @import "organisms/site-footer";

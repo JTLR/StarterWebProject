@@ -1,0 +1,123 @@
+.button {
+	display: inline-block;
+	padding: $button-standard-padding;
+	border: none;
+	color: $button-color-standard;
+	background-color: $button-bg-color-standard;
+	cursor: pointer;
+	@include transition(.25s background-color ease, .25s color ease);
+	&:hover {
+		background-color: $button-hover-bg-color-standard;
+	}
+	&:focus {
+		background-color: $button-active-bg-color-standard;
+	}
+	// Sizes
+	&.small {
+		padding: $button-small-padding;
+	}
+	&.medium {
+		padding: $button-medium-padding;
+	}
+	&.large {
+		padding: $button-large-padding;
+	}
+	&.xlarge {
+		padding: $button-xlarge-padding;
+	}
+	// Embellishments
+	&.rounded {
+		@include border-radius($button-border-radius);
+	}
+	// Colours
+	&.blue {
+		color: $button-color-blue;
+		background-color: $button-bg-color-blue;
+		&:hover {
+			background-color: $button-hover-bg-color-blue;
+		}
+		&:focus {
+			background-color: $button-active-bg-color-blue;
+		}
+	}
+	&.green {
+		color: $button-color-green;
+		background-color: $button-bg-color-green;
+		&:hover {
+			background-color: $button-hover-bg-color-green;
+		}
+		&:focus {
+			background-color: $button-active-bg-color-green;
+		}
+	}
+	&.yellow {
+		color: $button-color-yellow;
+		background-color: $button-bg-color-yellow;
+		&:hover {
+			background-color: $button-hover-bg-color-yellow;
+		}
+		&:focus {
+			background-color: $button-active-bg-color-yellow;
+		}
+	}
+	&.orange {
+		color: $button-color-orange;
+		background-color: $button-bg-color-orange;
+		&:hover {
+			background-color: $button-hover-bg-color-orange;
+		}
+		&:focus {
+			background-color: $button-active-bg-color-orange;
+		}
+	}
+	&.red {
+		color: $button-color-red;
+		background-color: $button-bg-color-red;
+		&:hover {
+			background-color: $button-hover-bg-color-red;
+		}
+		&:focus {
+			background-color: $button-active-bg-color-red;
+		}
+	}
+	&.pink {
+		color: $button-color-pink;
+		background-color: $button-bg-color-pink;
+		&:hover {
+			background-color: $button-hover-bg-color-pink;
+		}
+		&:focus {
+			background-color: $button-active-bg-color-pink;
+		}
+	}
+	&.purple {
+		color: $button-color-purple;
+		background-color: $button-bg-color-purple;
+		&:hover {
+			background-color: $button-hover-bg-color-purple;
+		}
+		&:focus {
+			background-color: $button-active-bg-color-purple;
+		}
+	}
+	&.black {
+		color: $button-color-black;
+		background-color: $button-bg-color-black;
+		&:hover {
+			background-color: $button-hover-bg-color-black;
+		}
+		&:focus {
+			background-color: $button-active-bg-color-black;
+		}
+	}
+	&.grey {
+		color: $button-color-grey;
+		background-color: $button-bg-color-grey;
+		&:hover {
+			background-color: $button-hover-bg-color-grey;
+		}
+		&:focus {
+			background-color: $button-active-bg-color-grey;
+		}
+	}
+}
