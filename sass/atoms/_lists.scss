@@ -1,0 +1,32 @@
+ul, ol {
+	padding-left: $list-margin;
+}
+li {
+	margin-bottom: $list-item-margin;
+}
+ul {
+	li {
+
+	}
+	ul {
+		list-style-type: disc;
+	}
+}
+ol {
+	li {
+
+	}
+}
+dl {
+
+}
+dt,
+dd {
+	margin-bottom: $list-item-margin;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+
+}

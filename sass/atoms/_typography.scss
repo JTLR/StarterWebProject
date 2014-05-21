@@ -8,37 +8,44 @@ $font-counter: 1;
 		$h5-calculated: $font-size-h5 + (2 * ($font-counter - 1));
 		$h6-calculated: $font-size-h6 + ($font-counter - 1);
 		$p-calculated: $font-size-p + ($font-counter - 1);
-		h1 {
+		h1,
+		.h1 {
 			font-size: rem($h1-calculated);
 			line-height: rem($h1-calculated + 5);
 			margin-bottom: rem(15);
 		}
-		h2 {
+		h2,
+		.h2 {
 			font-size: rem($h2-calculated);
 			line-height: rem($h2-calculated + 5);
 			margin-bottom: rem(15);
 		}
-		h3 {
+		h3,
+		.h3 {
 			font-size: rem($h3-calculated);
 			line-height: rem($h3-calculated + 5);
 			margin-bottom: rem(15);
 		}
-		h4 {
+		h4,
+		.h4 {
 			font-size: rem($h4-calculated);
 			line-height: rem($h4-calculated + 5);
 			margin-bottom: rem(15);
 		}
-		h5 {
+		h5,
+		.h5 {
 			font-size: rem($h5-calculated);
 			line-height: rem($h5-calculated + 5);
 			margin-bottom: rem(15);
 		}
-		h6 {
+		h6,
+		.h6 {
 			font-size: rem($h6-calculated);
 			line-height: rem($h6-calculated + 5);
 			margin-bottom: rem(15);
 		}
-		p {
+		p,
+		.p {
 			font-size: rem($p-calculated);
 			line-height: rem($p-calculated + 5);
 			margin-bottom: rem(15);

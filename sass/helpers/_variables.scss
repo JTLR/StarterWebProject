@@ -46,8 +46,7 @@ $grey-light		: #ddd;
 $grey-dark		: #333;
 $white			: #fff;
 
-
-// sizing
+// Sizing
 $sizing-small	: rem(5);
 $sizing-medium	: rem(10);
 $sizing-large 	: rem(20);
@@ -123,6 +122,10 @@ $button-large-padding		: $sizing-large;
 $button-xlarge-padding		: $sizing-xlarge;
 
 $button-standard-padding	: $button-medium-padding;
+
+// Lists
+$list-margin 		: $sizing-large;
+$list-item-margin	: $sizing-medium;
 
 // organisms
 // site
