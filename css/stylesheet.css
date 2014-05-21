@@ -1,6 +1,30 @@
 .no-margin {
   margin: 0; }
 
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.absolute {
+  position: absolute; }
+
+.relative {
+  position: relative; }
+
+.width-full {
+  width: 100%; }
+
+.width-half {
+  width: 50%; }
+
+.width-quarter {
+  width: 25%; }
+
+.width-third {
+  width: 33.33%; }
+
 /*
  *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2166,6 +2190,11 @@ p {
       background-color: #ddd; }
     .button.grey:focus {
       background-color: #333; }
+
+img {
+  width: 100%;
+  height: auto;
+  max-width: 100%; }
 
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
