@@ -2104,7 +2104,7 @@ p, .p {
     line-height: 1.5rem;
     margin-bottom: 0.9375rem; } }
 
-.button {
+.button, input[type="button"], input[type="submit"] {
   display: inline-block;
   padding: 0.625rem;
   border: none;
@@ -2114,85 +2114,129 @@ p, .p {
   -webkit-transition: 0.25s background-color ease, 0.25s color ease;
   -moz-transition: 0.25s background-color ease, 0.25s color ease;
   transition: 0.25s background-color ease, 0.25s color ease; }
-  .button:hover {
+  .button:hover, input[type="button"]:hover, input[type="submit"]:hover {
     background-color: #ddd; }
-  .button:focus {
+  .button:focus, input[type="button"]:focus, input[type="submit"]:focus {
     background-color: #333; }
-  .button.small {
+  .button.small, input.small[type="button"], input.small[type="submit"] {
     padding: 0.3125rem; }
-  .button.medium {
+  .button.medium, input.medium[type="button"], input.medium[type="submit"] {
     padding: 0.625rem; }
-  .button.large {
+  .button.large, input.large[type="button"], input.large[type="submit"] {
     padding: 1.25rem; }
-  .button.xlarge {
+  .button.xlarge, input.xlarge[type="button"], input.xlarge[type="submit"] {
     padding: 1.875rem; }
-  .button.rounded {
+  .button.rounded, input.rounded[type="button"], input.rounded[type="submit"] {
     -webkit-border-radius: 0.3125rem;
     -moz-border-radius: 0.3125rem;
     border-radius: 0.3125rem; }
-  .button.blue {
+  .button.blue, input.blue[type="button"], input.blue[type="submit"] {
     color: #fff;
     background-color: #0074D9; }
-    .button.blue:hover {
+    .button.blue:hover, input.blue[type="button"]:hover, input.blue[type="submit"]:hover {
       background-color: #0d92ff; }
-    .button.blue:focus {
+    .button.blue:focus, input.blue[type="button"]:focus, input.blue[type="submit"]:focus {
       background-color: #001F3F; }
-  .button.green {
+  .button.green, input.green[type="button"], input.green[type="submit"] {
     color: #fff;
     background-color: #2ECC40; }
-    .button.green:hover {
+    .button.green:hover, input.green[type="button"]:hover, input.green[type="submit"]:hover {
       background-color: #54d962; }
-    .button.green:focus {
+    .button.green:focus, input.green[type="button"]:focus, input.green[type="submit"]:focus {
       background-color: #25a231; }
-  .button.yellow {
+  .button.yellow, input.yellow[type="button"], input.yellow[type="submit"] {
     color: #000;
     background-color: #FFDC00; }
-    .button.yellow:hover {
+    .button.yellow:hover, input.yellow[type="button"]:hover, input.yellow[type="submit"]:hover {
       background-color: #ffe033; }
-    .button.yellow:focus {
+    .button.yellow:focus, input.yellow[type="button"]:focus, input.yellow[type="submit"]:focus {
       background-color: #ccad00; }
-  .button.orange {
+  .button.orange, input.orange[type="button"], input.orange[type="submit"] {
     color: #fff;
     background-color: #FF851B; }
-    .button.orange:hover {
+    .button.orange:hover, input.orange[type="button"]:hover, input.orange[type="submit"]:hover {
       background-color: #ff9e4e; }
-    .button.orange:focus {
+    .button.orange:focus, input.orange[type="button"]:focus, input.orange[type="submit"]:focus {
       background-color: #e76800; }
-  .button.red {
+  .button.red, input.red[type="button"], input.red[type="submit"] {
     color: #fff;
     background-color: #FF4136; }
-    .button.red:hover {
+    .button.red:hover, input.red[type="button"]:hover, input.red[type="submit"]:hover {
       background-color: #ff7169; }
-    .button.red:focus {
+    .button.red:focus, input.red[type="button"]:focus, input.red[type="submit"]:focus {
       background-color: #ff1003; }
-  .button.pink {
+  .button.pink, input.pink[type="button"], input.pink[type="submit"] {
     color: #fff;
     background-color: #F012BE; }
-    .button.pink:hover {
+    .button.pink:hover, input.pink[type="button"]:hover, input.pink[type="submit"]:hover {
       background-color: #f342cd; }
-    .button.pink:focus {
+    .button.pink:focus, input.pink[type="button"]:focus, input.pink[type="submit"]:focus {
       background-color: #c30c9b; }
-  .button.purple {
+  .button.purple, input.purple[type="button"], input.purple[type="submit"] {
     color: #fff;
     background-color: #B10DC9; }
-    .button.purple:hover {
+    .button.purple:hover, input.purple[type="button"]:hover, input.purple[type="submit"]:hover {
       background-color: #d319f0; }
-    .button.purple:focus {
+    .button.purple:focus, input.purple[type="button"]:focus, input.purple[type="submit"]:focus {
       background-color: #860a99; }
-  .button.black {
+  .button.black, input.black[type="button"], input.black[type="submit"] {
     color: #fff;
     background-color: #111; }
-    .button.black:hover {
+    .button.black:hover, input.black[type="button"]:hover, input.black[type="submit"]:hover {
       background-color: #333; }
-    .button.black:focus {
+    .button.black:focus, input.black[type="button"]:focus, input.black[type="submit"]:focus {
       background-color: #000; }
-  .button.grey {
+  .button.grey, input.grey[type="button"], input.grey[type="submit"] {
     color: #fff;
     background-color: #aaa; }
-    .button.grey:hover {
+    .button.grey:hover, input.grey[type="button"]:hover, input.grey[type="submit"]:hover {
       background-color: #ddd; }
-    .button.grey:focus {
+    .button.grey:focus, input.grey[type="button"]:focus, input.grey[type="submit"]:focus {
       background-color: #333; }
+
+
+label {
+  display: block;
+  font-weight: bold; }
+
+
+
+input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="range"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea {
+  width: 100%;
+  padding: 0.3125rem;
+  border: 0.0625rem solid #aaa; }
+
+input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="range"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] { }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 img {
   width: 100%;

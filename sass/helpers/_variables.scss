@@ -1,14 +1,15 @@
-// Stylesheet
+// Base variables
+// - Stylesheet
 $stylesheet: 'stylesheet' !default;
 
-// Breakpoints
-$base  : 0;			 // Above 0px
-$small : 30.063em;   // Above 320px
-$medium: 33.813em;   // Above 480px
-$large : 48em;       // Above 767px
-$xlarge: 64em;       // Above 1024px
+// - Breakpoints
+$base  : 0;			 // 0px
+$small : 30.063em;   // 320px
+$medium: 33.813em;   // 480px
+$large : 48em;       // 767px
+$xlarge: 64em;       // 1024px
 
-// Grid variables
+// - Grid variables
 $grid-columns	 : 24;            
 $grid-width		 : 1170;         
 $column-width	 : "";      
@@ -16,7 +17,7 @@ $column-margin	 : 30;
 $breakpoints 	 : $base, $small, $medium, $large, $xlarge;
 $breakpoint-alias: "base", "small", "medium", "large", "xlarge";
 
-// Colors
+// - Colors
 $blue 			: #0074D9;
 $blue-dark		: #001F3F;
 $blue-light		: lighten($blue, 10%);
@@ -46,20 +47,30 @@ $grey-light		: #ddd;
 $grey-dark		: #333;
 $white			: #fff;
 
-// Sizing
+// - Sizing
 $sizing-small	: rem(5);
 $sizing-medium	: rem(10);
 $sizing-large 	: rem(20);
 $sizing-xlarge  : rem(30);
 
+// - Borders
+// -- Border widths
+$border-width-small		: rem(1);
+$border-width-medium	: rem(2);
+$border-width-large		: rem(5);
+$border-width-xlarge	: rem(10);
+
+// -- Border style
+$border-style 	: solid;
+
 // Atoms
-// Typography
-// Font families
+// - Typography
+// -- Font families
 $font-sans-serif	: Arial, "Helvetica Neue", Helvetica, sans-serif;
 $font-serif 		: Georgia, Times, "Times New Roman", serif;
 $font-monospaced	: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 
-// Typography sizes
+// -- Typography sizes
 $font-size-h1: 40;
 $font-size-h2: 35;
 $font-size-h3: 30;
@@ -68,11 +79,11 @@ $font-size-h5: 20;
 $font-size-h6: 15;
 $font-size-p : 15;
 
-// Typography miscellaneous
+// -- Typography miscellaneous
 $text-selection-color: $grey;
 
-// Buttons
-// Button colors
+// - Buttons
+// -- Button colors
 $button-bg-color-blue			: $blue;
 $button-color-blue 				: $white;
 $button-hover-bg-color-blue		: $blue-light;
@@ -115,10 +126,10 @@ $button-color-standard 				: $button-color-grey;
 $button-hover-bg-color-standard		: $button-hover-bg-color-grey;
 $button-active-bg-color-standard	: $button-active-bg-color-grey;
 
-// Button embellishments
+// -- Button embellishments
 $button-border-radius	: $sizing-small;
 
-// Button sizes
+// -- Button sizes
 $button-small-padding		: $sizing-small;
 $button-medium-padding		: $sizing-medium;
 $button-large-padding		: $sizing-large;
@@ -126,30 +137,37 @@ $button-xlarge-padding		: $sizing-xlarge;
 
 $button-standard-padding	: $button-medium-padding;
 
-// Lists
+// - Lists
 $list-margin 		: $sizing-large;
 $list-item-margin	: $sizing-medium;
 
-// Tables
+// - Tables
 $table-margin				: $sizing-large;
 $table-cell-padding			: $sizing-medium;
-$table-cell-border-width	: rem(1);
+$table-cell-border-width	: $border-width-small;
 $table-cell-border-color	: $grey;
-$table-cell-border-style	: solid;
+$table-cell-border-style	: $border-style;
 
-// organisms
-// site
+// - Forms
+// -- Inputs
+$input-text-border-width	: $border-width-small;
+$input-text-border-color	: $grey;
+$input-text-border-style	: $border-style;
+$input-text-padding			: $sizing-small;
+
+// Organisms
+// - site
 $site-font 		: $font-sans-serif;
 
-// site-header
+// - site-header
 $site-header-bg-color	: $grey;
 $site-header-color 		: $black;
 $site-header-padding	: $sizing-large;
 
-// site-main
+// - site-main
 $site-main-padding	: $sizing-large;
 
-// site-footer
+// - site-footer
 $site-footer-bg-color	: $black-light;
 $site-footer-color 		: $white;
 $site-footer-padding	: $sizing-large;

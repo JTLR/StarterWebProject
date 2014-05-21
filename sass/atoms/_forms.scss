@@ -1,0 +1,129 @@
+form {
+
+}
+label {
+	display: block;
+	font-weight: bold;
+}
+fieldset {
+
+}
+input {
+}
+
+// Text inputs
+%input-text {
+	width: 100%;
+	padding: $input-text-padding;
+	border: $input-text-border-width $input-text-border-style $input-text-border-color;
+}
+input {
+	&[type="date"],
+	&[type="datetime"],
+	&[type="datetime-local"],
+	&[type="email"],
+	&[type="month"],
+	&[type="number"],
+	&[type="password"],
+	&[type="range"],
+	&[type="search"],
+	&[type="tel"],
+	&[type="text"],
+	&[type="time"],
+	&[type="url"],
+	&[type="week"] {
+		@extend %input-text;
+		padding: 
+	}
+}
+select,
+textarea {
+	@extend %input-text;
+}
+
+input[type="date"] {
+	
+}
+input[type="datetime"] {
+	
+} 
+input[type="datetime-local"] {
+	
+} 
+input[type="email"] {
+	
+} 
+input[type="month"] {
+	
+} 
+input[type="number"] {
+	
+} 
+input[type="password"] {
+	
+} 
+input[type="range"] {
+	
+} 
+input[type="search"] {
+	
+} 
+input[type="tel"] {
+	
+} 
+input[type="text"] {
+	
+} 
+input[type="time"] {
+	
+} 
+input[type="url"] {
+	
+} 
+input[type="week"] {
+	
+} 
+
+
+input[type="button"] {
+	@extend .button;
+} 
+input[type="checkbox"] {
+	
+} 
+input[type="color"] {
+	
+} 
+input[type="file"] {
+	
+} 
+input[type="hidden"] {
+	
+} 
+input[type="image"] {
+	
+} 
+input[type="radio"] {
+	
+} 
+input[type="reset"] {
+	
+} 
+input[type="submit"] {
+	@extend .button;
+} 
+select {
+
+}
+::-webkit-input-placeholder {
+}
+:-moz-placeholder {
+}
+::-moz-placeholder {
+}
+:-ms-input-placeholder {  
+}
+input[placeholder], 
+[placeholder], 
+*[placeholder] {
+}
