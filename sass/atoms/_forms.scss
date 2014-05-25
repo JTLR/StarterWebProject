@@ -34,7 +34,7 @@ input {
 	&[type="url"],
 	&[type="week"] {
 		@extend %input-text;
-		padding: 
+		padding: $input-text-padding;
 	}
 }
 select,
