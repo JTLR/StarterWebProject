@@ -1,0 +1,32 @@
+// External libraries
+$include-bourbon		: true !default;
+
+// Helpers
+$include-classes		: true !default;
+$include-debug			: true !default;
+$include-functions		: true !default;
+$include-mixins			: true !default;
+$include-variables		: true !default;
+
+// Fonts
+$include-font-awesome	: true !default;
+
+// Base
+$include-reset			: true !default;
+
+// Layout
+$include-grid			: true !default;
+
+// Atoms
+$include-buttons		: true !default;
+$include-forms			: true !default;
+$include-images			: true !default;
+$include-lists			: true !default;
+$include-tables			: true !default;
+$include-typography		: true !default;
+
+// Organisms
+$include-site			: true !default;
+$include-site-header	: true !default;
+$include-site-main		: true !default;
+$include-site-footer	: true !default;

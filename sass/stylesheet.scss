@@ -1,33 +1,72 @@
+// Configuration
+@import "helpers/configuration";
+
 // External libraries
-@import "libraries/bourbon/bourbon";
+@if $include-bourbon == true {
+	@import "libraries/bourbon/bourbon";
+}
 
 // Helpers
-@import "helpers/variables";
-@import "helpers/functions";
-@import "helpers/mixins";
-@import "helpers/classes";
+@if $include-variables == true {
+	@import "helpers/variables";
+}
+@if $include-functions == true {
+	@import "helpers/functions";
+}
+@if $include-mixins == true {
+	@import "helpers/mixins";
+}
+@if $include-classes == true {
+	@import "helpers/classes";
+}
 
 // Fonts
-@import "fonts/font-awesome";
+@if $include-font-awesome == true {
+	@import "fonts/font-awesome";
+}
 
 // Base
-@import "base/reset";
+@if $include-reset == true {
+	@import "base/reset";
+}
 
 // Layout
-@import "layout/grid";
+@if $include-grid == true {
+	@import "layout/grid";
+}
 
 // Atoms
+@if $include-typography == true {
 @import "atoms/typography";
-@import "atoms/buttons";
-@import "atoms/forms";
-@import "atoms/images";
-@import "atoms/lists";
-@import "atoms/tables";
+}
+@if $include-buttons == true {
+	@import "atoms/buttons";
+}
+@if $include-forms == true {
+	@import "atoms/forms";
+}
+@if $include-images == true {
+	@import "atoms/images";
+}
+@if $include-lists == true {
+	@import "atoms/lists";
+}
+@if $include-tables == true {
+	@import "atoms/tables";
+}
 
 // Molecules
 
 // Organisms
-@import "organisms/site";
-@import "organisms/site-header";
-@import "organisms/site-main";
-@import "organisms/site-footer";
+@if $include-site == true {
+	@import "organisms/site";
+}
+@if $include-site-header == true {
+	@import "organisms/site-header";
+}
+@if $include-site-main == true {
+	@import "organisms/site-main";
+}
+@if $include-site-footer == true {
+	@import "organisms/site-footer";
+}
