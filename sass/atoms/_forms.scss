@@ -1,15 +1,18 @@
 form {
 
 }
+fieldset {
+
+}
 label {
 	@extend p;
 	display: block;
 	font-weight: bold;
 }
-fieldset {
+input,
+select,
+textarea {
 
-}
-input {
 }
 
 // Text inputs
