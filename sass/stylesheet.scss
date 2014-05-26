@@ -37,7 +37,7 @@
 
 // Atoms
 @if $include-typography == true {
-@import "atoms/typography";
+	@import "atoms/typography";
 }
 @if $include-buttons == true {
 	@import "atoms/buttons";
@@ -56,6 +56,105 @@
 }
 
 // Molecules
+// - Blocks
+@if $include-blocks == true {
+	@if $include-blocks-headline-byline == true {
+		@import "molecules/blocks/headline-byline";
+	}
+	@if $include-blocks-headline == true {
+		@import "molecules/blocks/headline";
+	}
+	@if $include-blocks-hero == true {
+		@import "molecules/blocks/hero";
+	}
+	@if $include-blocks-inset == true {
+		@import "molecules/blocks/inset";
+	}
+	@if $include-blocks-media == true {
+		@import "molecules/blocks/media";
+	}
+	@if $include-blocks-thumb-headline == true {
+		@import "molecules/blocks/thumb-headline";
+	}
+}
+
+// - Components
+@if $include-components == true {
+	@if $include-components-accordion == true {
+		@import "molecules/components/accordion";
+	}
+	@if $include-components-single-comment == true {
+		@import "molecules/components/single-comment";
+	}
+	@if $include-components-social-share == true {
+		@import "molecules/components/social-share";
+	}
+}
+
+// - Forms
+@if $include-forms == true {
+	@if $include-forms-comment == true {
+		@import "molecules/forms/comment";
+	}
+	@if $include-forms-newsletter == true {
+		@import "molecules/forms/newsletter";
+	}
+	@if $include-forms-search == true {
+		@import "molecules/forms/search";
+	}
+}
+
+// - Media
+@if $include-media == true {
+	@if $include-media-figure-with-caption == true {
+		@import "molecules/media/figure-with-caption";
+	}
+}
+
+// - Messaging
+@if $include-messaging == true {
+	@if $include-messaging-alert == true {
+		@import "molecules/messaging/alert";
+	}
+}
+
+// - Navigation
+@if $include-navigation == true {
+	@if $include-navigation-breadcrumb == true{
+		@import "molecules/navigation/breadcrumb";
+	}
+	@if $include-navigation-footer == true{
+		@import "molecules/navigation/footer";
+	}
+	@if $include-navigation-pagination == true{
+		@import "molecules/navigation/pagination";
+	}
+	@if $include-navigation-primary == true{
+		@import "molecules/navigation/primary";
+	}
+	@if $include-navigation-tabs == true {
+		@import "molecules/navigation/tabs";
+	}
+}
+
+// - Text
+@if $include-text == true {
+	@if $include-text-address == true {
+		@import "molecules/text/address";
+	}
+	@if $include-text-blockquote-with-citation == true {
+		@import "molecules/text/blockquote-with-citation";
+	}
+	@if $include-text-byline == true {
+		@import "molecules/text/byline";
+	}
+	@if $include-text-heading-group == true {
+		@import "molecules/text/heading-group";
+	}
+	@if $include-text-intro == true {
+		@import "molecules/text/intro";
+	}
+}
 
 // Organisms
 @if $include-site == true {

@@ -25,6 +25,53 @@ $include-lists			: true !default;
 $include-tables			: true !default;
 $include-typography		: true !default;
 
+// Molecules
+$include-blocks			: true !default;
+$include-components		: true !default;
+$include-forms			: true !default;
+$include-media			: true !default;
+$include-messaging		: true !default;
+$include-navigation		: true !default;
+$include-text			: true !default;
+
+// - Blocks
+$include-blocks-headline-byline	: true !default;
+$include-blocks-headline		: true !default;
+$include-blocks-hero			: true !default;
+$include-blocks-inset			: true !default;
+$include-blocks-media			: true !default;
+$include-blocks-thumb-headline	: true !default;
+
+// - Components
+$include-components-accordion		: true !default;
+$include-components-single-comment	: true !default;
+$include-components-social-share	: true !default;
+
+// - Forms
+$include-forms-comment		: true !default;
+$include-forms-newsletter	: true !default;
+$include-forms-search		: true !default;
+
+// - Media
+$include-media-figure-with-caption	: true !default;
+
+// - Messaging
+$include-messaging-alert	: true !default;
+
+// - Navigation
+$include-navigation-breadcrumb	: true !default;
+$include-navigation-footer		: true !default;
+$include-navigation-pagination	: true !default;
+$include-navigation-primary		: true !default;
+$include-navigation-tabs		: true !default;
+
+// - Text
+$include-text-address					: true !default;
+$include-text-blockquote-with-citation	: true !default;
+$include-text-byline					: true !default;
+$include-text-heading-group				: true !default;
+$include-text-intro						: true !default;
+
 // Organisms
 $include-site			: true !default;
 $include-site-header	: true !default;

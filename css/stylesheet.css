@@ -1318,7 +1318,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, label, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, label, .byline, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -1979,7 +1979,7 @@ h6, .h6 {
   line-height: 1.25rem;
   margin-bottom: 0.9375rem; }
 
-p, label, .p {
+p, label, .byline, .p {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   margin-bottom: 0.9375rem; }
@@ -2009,7 +2009,7 @@ p, label, .p {
     font-size: 1rem;
     line-height: 1.3125rem;
     margin-bottom: 0.9375rem; }
-  p, label, .p {
+  p, label, .byline, .p {
     font-size: 1rem;
     line-height: 1.3125rem;
     margin-bottom: 0.9375rem; } }
@@ -2039,7 +2039,7 @@ p, label, .p {
     font-size: 1.0625rem;
     line-height: 1.375rem;
     margin-bottom: 0.9375rem; }
-  p, label, .p {
+  p, label, .byline, .p {
     font-size: 1.0625rem;
     line-height: 1.375rem;
     margin-bottom: 0.9375rem; } }
@@ -2069,7 +2069,7 @@ p, label, .p {
     font-size: 1.125rem;
     line-height: 1.4375rem;
     margin-bottom: 0.9375rem; }
-  p, label, .p {
+  p, label, .byline, .p {
     font-size: 1.125rem;
     line-height: 1.4375rem;
     margin-bottom: 0.9375rem; } }
@@ -2099,7 +2099,7 @@ p, label, .p {
     font-size: 1.1875rem;
     line-height: 1.5rem;
     margin-bottom: 0.9375rem; }
-  p, label, .p {
+  p, label, .byline, .p {
     font-size: 1.1875rem;
     line-height: 1.5rem;
     margin-bottom: 0.9375rem; } }
@@ -2299,6 +2299,9 @@ th {
 th, td {
   padding: 0.625rem;
   border: 0.0625rem solid #aaa; }
+
+.byline {
+  font-style: italic; }
 
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
