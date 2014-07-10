@@ -71,8 +71,8 @@ $font-serif 		: Georgia, Times, "Times New Roman", serif;
 $font-monospaced	: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 
 // -- Typography sizes
-$font-size-h1: 40;
-$font-size-h2: 35;
+$font-size-h1: 60;
+$font-size-h2: 45;
 $font-size-h3: 30;
 $font-size-h4: 25;
 $font-size-h5: 20;
@@ -150,10 +150,15 @@ $table-cell-border-style	: $border-style;
 
 // - Forms
 // -- Inputs
+// --- Text
 $input-text-border-width	: $border-width-small;
 $input-text-border-color	: $grey;
 $input-text-border-style	: $border-style;
+$input-text-margin-bottom	: $sizing-large;
 $input-text-padding			: $sizing-small;
+
+// --- Miscellaneous
+$input-miscellaneous-margin-bottom: $sizing-large;
 
 // -- Placeholder
 $placeholder-color	: $black;

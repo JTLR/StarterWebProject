@@ -1950,13 +1950,13 @@ a {
   background: #aaa; }
 
 h1, .h1 {
-  font-size: 2.5rem;
-  line-height: 2.8125rem;
+  font-size: 3.75rem;
+  line-height: 4.0625rem;
   margin-bottom: 0.9375rem; }
 
 h2, .h2 {
-  font-size: 2.1875rem;
-  line-height: 2.5rem;
+  font-size: 2.8125rem;
+  line-height: 3.125rem;
   margin-bottom: 0.9375rem; }
 
 h3, .h3 {
@@ -1986,12 +1986,12 @@ p, label, .byline, .p {
 
 @media screen and (min-width: 30.063em) {
   h1, .h1 {
-    font-size: 2.625rem;
-    line-height: 2.9375rem;
+    font-size: 3.875rem;
+    line-height: 4.1875rem;
     margin-bottom: 0.9375rem; }
   h2, .h2 {
-    font-size: 2.3125rem;
-    line-height: 2.625rem;
+    font-size: 2.9375rem;
+    line-height: 3.25rem;
     margin-bottom: 0.9375rem; }
   h3, .h3 {
     font-size: 2rem;
@@ -2016,12 +2016,12 @@ p, label, .byline, .p {
 
 @media screen and (min-width: 33.813em) {
   h1, .h1 {
-    font-size: 2.75rem;
-    line-height: 3.0625rem;
+    font-size: 4rem;
+    line-height: 4.3125rem;
     margin-bottom: 0.9375rem; }
   h2, .h2 {
-    font-size: 2.4375rem;
-    line-height: 2.75rem;
+    font-size: 3.0625rem;
+    line-height: 3.375rem;
     margin-bottom: 0.9375rem; }
   h3, .h3 {
     font-size: 2.125rem;
@@ -2046,12 +2046,12 @@ p, label, .byline, .p {
 
 @media screen and (min-width: 48em) {
   h1, .h1 {
-    font-size: 2.875rem;
-    line-height: 3.1875rem;
+    font-size: 4.125rem;
+    line-height: 4.4375rem;
     margin-bottom: 0.9375rem; }
   h2, .h2 {
-    font-size: 2.5625rem;
-    line-height: 2.875rem;
+    font-size: 3.1875rem;
+    line-height: 3.5rem;
     margin-bottom: 0.9375rem; }
   h3, .h3 {
     font-size: 2.25rem;
@@ -2076,12 +2076,12 @@ p, label, .byline, .p {
 
 @media screen and (min-width: 64em) {
   h1, .h1 {
-    font-size: 3rem;
-    line-height: 3.3125rem;
+    font-size: 4.25rem;
+    line-height: 4.5625rem;
     margin-bottom: 0.9375rem; }
   h2, .h2 {
-    font-size: 2.6875rem;
-    line-height: 3rem;
+    font-size: 3.3125rem;
+    line-height: 3.625rem;
     margin-bottom: 0.9375rem; }
   h3, .h3 {
     font-size: 2.375rem;
@@ -2203,6 +2203,7 @@ label {
 
 input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="file"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea {
   width: 100%;
+  margin-bottom: 1.25rem;
   padding: 0.3125rem;
   border: 0.0625rem solid #aaa; }
 
@@ -2225,6 +2226,10 @@ input[type="date"], input[type="datetime"], input[type="datetime-local"], input[
 
 
 
+
+
+input[type="checkbox"], input[type="color"], input[type="hidden"], input[type="image"], input[type="radio"], input[type="range"] {
+  margin-bottom: 1.25rem; }
 
 
 

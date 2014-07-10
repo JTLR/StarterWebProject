@@ -12,12 +12,12 @@ label {
 input,
 select,
 textarea {
-
 }
 
 // Text inputs
 %input-text {
 	width: 100%;
+	margin-bottom: $input-text-margin-bottom;
 	padding: $input-text-padding;
 	border: $input-text-border-width $input-text-border-style $input-text-border-color;
 }
@@ -101,7 +101,19 @@ input[type="reset"] {
 	@extend .button;
 } 
 
-// Other
+// Miscellaneous inputs
+%input-miscellaneous {
+	margin-bottom: $input-miscellaneous-margin-bottom;
+}
+input[type="checkbox"],
+input[type="color"],
+input[type="hidden"],
+input[type="image"],
+input[type="radio"],
+input[type="range"] {
+	@extend %input-miscellaneous;
+}
+
 input[type="checkbox"] {
 	
 } 
