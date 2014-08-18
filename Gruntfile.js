@@ -1,39 +1,32 @@
 module.exports = function(grunt) {
+    var projectHomePage = '';
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        // Build tools
         uglify: {
-            options: {
-                compress: {
-                    drop_console: true
-                }
-            },
-            build: {
-                src: 'javascript/javascript.js',
-                dest: 'javascript/javascript.min.js'
-            }
-        },
-        concat: {
-            options: {
-                separator: ';'
-            },
-            dist: {
-                src: 'javascript/*.js',
-                dest: 'javascript/javascript.min.js'
+            libs: {
+                src: ['javascript/libs/*.js', '!javascript/libs/*.min.js'],
+                dest: 'javascript/libs',
+                expand: true,
+                flatten: true,
+                drop_console: true,
+                ext: '.min.js',
+                extDot: 'last'
             }
         },
         sass: {
             dev: {
                 files: {
-                    'css/stylesheet.css': 'sass/stylesheet.scss'
+                    'css/stylesheet.css': 'sass/stylesheet.scss',
                 },
-                options: {
-                    sourceComments: 'map'
+                options : {
+                    sourceComments: 'normal'
                 }
             },
             prod: {
                 files: {
-                    'css/stylesheet.css': 'sass/stylesheet.scss'
+                    'css/stylesheet.min.css': 'sass/stylesheet.scss',
                 },
                 options: {
                     outputStyle: 'compressed'
@@ -43,28 +36,30 @@ module.exports = function(grunt) {
         imagemin: {
             dynamic: {
                 options: {
-                    optimizationLevel: 3
+                    optimizationLevel: 7
                 },
                 files: [{
                     expand: true,
                     cwd: 'images/',       
-                    src: ['*.{png,jpg,gif}'],
+                    src: 'images/*.{png,jpg,gif}',
                     dest: 'images/optimised/'
                 }]
             }
         },
-        watch: {
-            images: {
-                files: ['images/*.{png,jpg,gif}'],
-                tasks: ['imagemin:dynamic']
-            },
-            javascript: {
-                files: ['javascript/plugins/*.js', 'javascript/javascript.js'],
-                tasks: ['uglify:build']
-            },
-            sass: {
-                files: ['sass/**/*.scss'],
-                tasks: ['sass:dev']
+        requirejs: {
+            compile: {
+                options: {
+                    baseUrl: 'javascript/',
+                    mainConfigFile: 'javascript/main.js',
+                    name: 'main',
+                    out: 'javascript/main.min.js',
+                    preserveLicenseComments: false,
+                    uglify: {
+                        expand: true,
+                        flatten: true,
+                        drop_console: true
+                    }
+                }
             }
         },
         jshint: {
@@ -78,7 +73,7 @@ module.exports = function(grunt) {
                 }
             },
             files: {
-                src: ['javascript/javascript.js']
+                src: ['javascript/main.js']
             }
         },
         csslint: {
@@ -89,50 +84,68 @@ module.exports = function(grunt) {
                 src: ['css/stylesheet.css']
             }
         },
-        browserstack: {
-            dev: {
-                credentials: {
-                    username: '',
-                    password: ''
+        pagespeed: {
+            options: {
+                nokey: true,
+                url: projectURL
+            },
+            desktop: {
+                options: {
+                    url: projectHomePage,
+                    locale: 'en_GB',
+                    strategy: 'desktop',
+                    threshold: 40
                 }
             },
-            start: {
-                url: '',
-                browsers: [{
-                    os: 'win',
-                    browser: 'ie',
-                    version: '8.0'
-                }]
+            mobile: {
+                options: {
+                    url: projectHomePage,
+                    locale: 'en_GB',
+                    strategy: 'mobile',
+                    threshold: 40
+                }
             }
         },
-        browserstack_list: {
-            dev: {
-                username: '',
-                password: ''
-            }
-        },
+        // Production/clean up tools
         clean : {
             src : [
-                "**/example-*.{js,css,php,tpl,twig}",
-                "**/demo-*.{js,css,php,tpl,twig}",
-                "**/*.map"
+                '**/example-*.{js,css,php,tpl,twig}',
+                '**/demo-*.{js,css,php,tpl,twig}'
             ]
+        },
+        // Tasks
+        watch: {
+            images: {
+                files: ['images/*.{png,jpg,gif}'],
+                tasks: ['imagemin:dynamic']
+            },
+            javascriptMain: {
+                files: ['javascript/**/*.js', '!javascript/**/*.min.js'],
+                tasks: ['requirejs']
+            },
+            javascriptPlugins: {
+                files: ['javascript/*/*.js', '!javascript/*/*.min.js'],
+                tasks: ['uglify:plugins']
+            },
+            sass: {
+                files: ['code/sass/**/*.scss'],
+                tasks: ['sass:dev', 'sass:prod']
+            }
         }
     });
 
     // Load npm tasks
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-csslint');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-sass');
-    grunt.loadNpmTasks('grunt-browserstack');
+    grunt.loadNpmTasks('grunt-pagespeed');
 
     // Defined tasks
     grunt.registerTask('validate', ['jshint', 'csslint']);
-    grunt.registerTask('browsertest', ['browserstack']);
-    grunt.registerTask('produce', ['uglify', 'sass:prod', 'imagemin', 'clean']);
+    grunt.registerTask('produce', ['requirejs', 'sass:prod', 'imagemin', 'clean']);
 };
