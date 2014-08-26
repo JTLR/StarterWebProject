@@ -1,5 +1,6 @@
 module.exports = function(grunt) {
-    var projectHomePage = '';
+    var projectHomePage = '',
+        projectURL = '';
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -23,13 +24,20 @@ module.exports = function(grunt) {
                 options : {
                     sourceComments: 'normal'
                 }
-            },
-            prod: {
+            }
+        },
+        cmq: {
+            stylesheet: {
                 files: {
-                    'css/stylesheet.min.css': 'sass/stylesheet.scss',
-                },
-                options: {
-                    outputStyle: 'compressed'
+                    'css/stylesheet.css': ['css/stylesheet.css']
+                }
+            }
+
+        },
+        cssmin: {
+            stylesheet: {
+                files: {
+                    'css/stylesheet.min.css': ['css/stylesheet.css']
                 }
             }
         },
@@ -128,8 +136,8 @@ module.exports = function(grunt) {
                 tasks: ['uglify:plugins']
             },
             sass: {
-                files: ['code/sass/**/*.scss'],
-                tasks: ['sass:dev', 'sass:prod']
+                files: ['sass/**/*.scss'],
+                tasks: ['sass', 'cmq', 'cssmin']
             }
         }
     });
@@ -142,6 +150,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-combine-media-queries');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-pagespeed');
 

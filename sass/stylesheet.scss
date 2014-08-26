@@ -57,7 +57,7 @@
 
 // Molecules
 // - Blocks
-@if $include-blocks == true {
+/*@if $include-blocks == true {
 	@if $include-blocks-headline-byline == true {
 		@import "molecules/blocks/headline-byline";
 	}
@@ -154,7 +154,8 @@
 	@if $include-text-intro == true {
 		@import "molecules/text/intro";
 	}
-}
+}*/
+
 
 // Organisms
 @if $include-site == true {
