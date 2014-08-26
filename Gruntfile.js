@@ -80,6 +80,7 @@ module.exports = function(grunt) {
                 }
             }
         },
+        // Testing
         jshint: {
             options: {
                 curly: true,
@@ -168,5 +169,6 @@ module.exports = function(grunt) {
 
     // Defined tasks
     grunt.registerTask('validate', ['jshint', 'csslint']);
-    grunt.registerTask('produce', ['requirejs', 'sass:prod', 'imagemin', 'clean']);
+    grunt.registerTask('prod', ['requirejs', 'uglify:plugins', 'sass', 'cmq', 'uncss', 'cssmin', 'imagemin', 'clean']);
+    grunt.registerTask('un-css', ['uncss', 'cssmin']);
 };
