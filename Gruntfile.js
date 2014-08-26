@@ -26,6 +26,16 @@ module.exports = function(grunt) {
                 }
             }
         },
+        uncss: {
+            dist: {
+                options: {
+                    stylesheets: ['css/stylesheet.css']
+                },
+                files: {
+                    'css/stylesheet.css': ['*.html', 'html/**/*.html']
+                }
+            }
+        },
         cmq: {
             stylesheet: {
                 files: {
@@ -154,6 +164,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-combine-media-queries');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-pagespeed');
+    grunt.loadNpmTasks('grunt-uncss');
 
     // Defined tasks
     grunt.registerTask('validate', ['jshint', 'csslint']);
