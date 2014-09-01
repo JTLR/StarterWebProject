@@ -15,6 +15,7 @@
     "grunt-contrib-watch": "~0.6.1",
     "grunt-pagespeed": "~0.2.0",
     "grunt-sass": "~0.14.0",
-    "grunt-uncss": "^0.3.6"
+    "grunt-uncss": "^0.3.6",
+    "grunt-contrib-haml": "~0.2.0"
   }
 }

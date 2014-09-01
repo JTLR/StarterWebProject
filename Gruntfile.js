@@ -80,6 +80,13 @@ module.exports = function(grunt) {
                 }
             }
         },
+        haml: {
+            dist: {
+                files: {
+                    'index.html': 'index.haml'
+                }
+            }
+        },
         // Testing
         jshint: {
             options: {
@@ -149,6 +156,10 @@ module.exports = function(grunt) {
             sass: {
                 files: ['sass/**/*.scss'],
                 tasks: ['sass', 'cmq', 'cssmin']
+            },
+            haml : {
+                files: ['*.haml'],
+                tasks: ['haml']
             }
         }
     });
@@ -162,6 +173,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-haml');
     grunt.loadNpmTasks('grunt-combine-media-queries');
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-pagespeed');
@@ -169,6 +181,6 @@ module.exports = function(grunt) {
 
     // Defined tasks
     grunt.registerTask('validate', ['jshint', 'csslint']);
-    grunt.registerTask('prod', ['requirejs', 'uglify:plugins', 'sass', 'cmq', 'uncss', 'cssmin', 'imagemin', 'clean']);
+    grunt.registerTask('prod', ['haml', 'requirejs', 'uglify:plugins', 'sass', 'cmq', 'uncss', 'cssmin', 'imagemin', 'clean']);
     grunt.registerTask('un-css', ['uncss', 'cssmin']);
 };

@@ -1,0 +1,107 @@
+!!!
+/[if lt IE 7] <html class="ie ie6 lte9 lte8 lte7" lang="en">
+/[if IE 7] <html class="ie ie7 lte9 lte8 lte7" lang="en">
+/[if IE 8] <html class="ie ie8 lte9 lte8" lang="en">
+/[if IE 9] <html class="ie ie9 lte9">
+/[if gt IE 9] <html lang="en">
+/ [if !IE]><!
+%html{:lang => "en"}
+	/ <![endif]
+	%head
+		%link{:href => "css/stylesheet.css", :rel => "stylesheet", :type => "text/css"}/
+		%title Starter Web Project
+		%meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1", :name => "viewport"}/
+		%link{:href => "css/stylesheet.css", :rel => "stylesheet", :type => "text/css"}/
+	%body
+		%header.site-header
+			.grid
+				.row
+					.col
+						%h1.site-header-name.no-margin New web project
+		%main.site-main
+			.grid
+				.row
+					.col
+						%h2 Atoms
+						%ul
+							%li
+								%a{:href => "html/atoms/typography.html", :title => "Typography"} Typography
+							%li
+								%a{:href => "html/atoms/buttons.html", :title => "Buttons"} Buttons
+							%li
+								%a{:href => "html/atoms/images.html", :title => "Images"} Images
+							%li
+								%a{:href => "html/atoms/lists.html", :title => "Lists"} Lists
+							%li
+								%a{:href => "html/atoms/tables.html", :title => "Tables"} Tables
+							%li
+								%a{:href => "html/atoms/forms.html", :title => "Forms"} Forms
+						%h2 Molecules
+						%h3 Blocks
+						%ul
+							%li
+								%a{:href => "html/molecules/blocks/headline-byline.html", :title => "Headline byline"} Headline byline
+							%li
+								%a{:href => "html/molecules/blocks/headline.html", :title => "Headline"} Headline
+							%li
+								%a{:href => "html/molecules/blocks/hero.html", :title => "Hero"} Hero
+							%li
+								%a{:href => "html/molecules/blocks/inset.html", :title => "Inset"} Inset
+							%li
+								%a{:href => "html/molecules/blocks/media.html", :title => "Media"} Media
+							%li
+								%a{:href => "html/molecules/blocks/thumb-headline.html", :title => "Thumb headline"} Thumb headline
+						%h3 Components
+						%ul
+							%li
+								%a{:href => "html/molecules/components/accordion.html", :title => "Accordion"} Accordion
+							%li
+								%a{:href => "html/molecules/components/single-comment.html", :title => "Single comment"} Single comment
+							%li
+								%a{:href => "html/molecules/components/social-share.html", :title => "Social share"} Social share
+						%h3 Forms
+						%ul
+							%li
+								%a{:href => "html/molecules/forms/comment.html", :title => "Comment"} Comment
+							%li
+								%a{:href => "html/molecules/forms/newsletter.html", :title => "Newsletter"} Newsletter
+							%li
+								%a{:href => "html/molecules/forms/search.html", :title => "Search"} Search
+						%h3 Media
+						%ul
+							%li
+								%a{:href => "html/molecules/media/figure-with-caption.html", :title => "Figure with caption"} Figure with caption
+						%h3 Messaging
+						%ul
+							%li
+								%a{:href => "html/molecules/messaging/alert.html", :title => "Alert"} Alert
+						%h3 Navigation
+						%ul
+							%li
+								%a{:href => "html/molecules/navigation/breadcrumb.html", :title => "Breadcrumb"} Breadcrumb
+							%li
+								%a{:href => "html/molecules/navigation/footer.html", :title => "Footer"} Footer
+							%li
+								%a{:href => "html/molecules/navigation/pagination.html", :title => "Pagination"} Pagination
+							%li
+								%a{:href => "html/molecules/navigation/primary.html", :title => "Primary"} Primary
+							%li
+								%a{:href => "html/molecules/navigation/tabs.html", :title => "Tabs"} Tabs
+						%h3 Text
+						%ul
+							%li
+								%a{:href => "html/molecules/text/address.html", :title => "Address"} Address
+							%li
+								%a{:href => "html/molecules/text/blockquote-with-citation.html", :title => "Blockquote with citation"} Blockquote with citation
+							%li
+								%a{:href => "html/molecules/text/byline.html", :title => "Byline"} Byline
+							%li
+								%a{:href => "html/molecules/text/heading-group.html", :title => "Heading group"} Heading group
+							%li
+								%a{:href => "html/molecules/text/intro.html", :title => "Intro"} Intro
+		%footer.site-footer
+			.grid
+				.row
+					.col
+						%p.no-margin © JTLR
+		%script{:src => "javascript/javascript.js", :type => "text/javascript"}
